@@ -47,8 +47,8 @@ public class IF200_IntroduccionProgra {
          * 
          */
         
-        Ejercicios_Semana2_PracticaEnClase ej;
-        ej = new Ejercicios_Semana2_PracticaEnClase();
+//        Ejercicios_Semana2_PracticaEnClase ej;
+//        ej = new Ejercicios_Semana2_PracticaEnClase();
 //        ej.quiz_B_piramide(5);
 //        System.out.println("EjercicioA: ");
 //        ej.ejercicioA(5);
@@ -63,6 +63,19 @@ public class IF200_IntroduccionProgra {
 //        ej.ejercicioE();
 //        System.out.println("\nEjercicio F: ");
 //        ej.ejercicioF();
+
+/**
+ * Instancia para la prueba de los métodos realizados para el laboratorio 1
+ */
+        Lab1_Ejercicios lab;
+        lab = new Lab1_Ejercicios();
+//        lab.ejercicio1(2);
+//        lab.ejercicio2(-5);
+//        lab.ejercicio3();
+//        lab.ejercicio4(24, 15, 50);
+//        lab.ejercicio5(4, 5);
+        int[] notas = {7, 8, 9, 10, 5, 1};
+        lab.ejercicio6(notas);
     }
     
 }
