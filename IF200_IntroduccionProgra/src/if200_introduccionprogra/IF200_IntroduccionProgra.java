@@ -51,11 +51,18 @@ public class IF200_IntroduccionProgra {
         ej = new Ejercicios_Semana2_PracticaEnClase();
 //        ej.quiz_B_piramide(5);
 //        System.out.println("EjercicioA: ");
-//        ej.ejercicioA();
+//        ej.ejercicioA(5);
 //        System.out.println("Figura B: ");
 //        ej.ejercicioB();
-        System.out.println("Figura C: ");
-        ej.ejercicioC();
+//        System.out.println("Figura C: ");
+//        ej.ejercicioC();
+//        System.out.println("Ejercicio d: ");
+//        int[] n = {8, 5, 2, 9, 10, 1, 3};
+//        ej.ejercicioD(n);
+//        System.out.println("Ejercicio e: ");
+//        ej.ejercicioE();
+//        System.out.println("\nEjercicio F: ");
+//        ej.ejercicioF();
     }
     
 }

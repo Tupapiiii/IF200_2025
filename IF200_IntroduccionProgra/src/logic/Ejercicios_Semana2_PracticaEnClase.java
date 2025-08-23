@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package logic;
 
 /**
@@ -14,6 +10,7 @@ public class Ejercicios_Semana2_PracticaEnClase {
     }
     
     public void  quiz_A_primos(){
+    
     }
     
     public void quiz_B_piramide(int n){
@@ -32,20 +29,30 @@ public class Ejercicios_Semana2_PracticaEnClase {
         
     }// end metodo
     
-    public void ejercicioA(){
-     int n = 5;
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n; j++) {
-                if(i == 1 || i == n || j == 1 || j == n){
-                    System.out.println("* ");
-                } else{
-                    System.out.println(" ");
-                }
-                
-            }
-            System.out.println();
-        }
+    public void ejercicioA(int n){
+         // Primera fila
+    for (int j = 0; j < n; j++) {
+        System.out.print("* ");
     }
+    System.out.println();
+
+    // Filas intermedias
+    for (int i = 0; i < n - 2; i++) {
+        System.out.print("* "); // primer asterisco
+        for (int j = 0; j < n - 2; j++) {
+            System.out.print("  "); // espacios
+        }
+        System.out.print("* "); // último asterisco
+        System.out.println();
+    }
+
+    // Última fila (solo si n > 1)
+    for (int j = 0; j < n; j++) {
+        System.out.print("* ");
+    }
+    System.out.println();
+
+  }
     
     public void ejercicioB(){
     // Número de asteriscos
@@ -72,4 +79,82 @@ public class Ejercicios_Semana2_PracticaEnClase {
         }
     }
     
+    public void ejercicioD(int[] n){
+        // orden mediante burbuja
+        for (int i = 0; i < n.length - 1; i++) {
+            for(int j = 0; j < n.length - 1 - i; j++){
+                if(n[j] > n[j + 1]){
+                    int temp = n[j];
+                    n[j] = n[j + 1];
+                    n[j + 1] = temp;
+                }
+            }
+        }
+        // muestra del resultado
+        System.out.println("Orden ascedente: ");
+        for(int num : n){
+        System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+    
+    public void ejercicioE(){
+    int[] n = new int[100];
+    java.util.Random rand = new java.util.Random();
+    
+    //generación de los numeros aleatorios
+        for (int i = 0; i < n.length; i++) {
+            n[i] = rand.nextInt(100);
+        }
+        
+        //orden descendente (burbuja)
+        for (int i = 0; i < n.length - 1; i++) {
+            for (int j = 0; j < n.length - 1- i; j++) {
+                if(n[j] < n[j + 1]){
+                    int temp = n[j];
+                    n[j] = n[j + 1];
+                    n[j + 1] = temp;
+                }
+            }
+        }
+        //muestra del resultado
+        System.out.println("Orden descendente: ");
+        for(int num : n){
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+    
+    public void ejercicioF(){
+    char[][] tablero = new char[8][8];
+    //inicialización del tablero con espacios
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                tablero[i][j] = ' ';
+            }
+        }
+        //fichas negras n en las primeras filas
+        for (int i = 0; i < 3; i++) {
+            for (int j = (i % 2 == 0) ? 1 : 0; j < 8; j += 2) {
+                tablero[i][j] = 'N';
+            }
+        }
+        //fichas rojas r en las ultimas 3 filas
+         for (int i = 5; i < 8; i++) {
+            for (int j = (i % 2 == 0) ? 1 : 0; j < 8; j += 2) {
+                tablero[i][j] = 'R';
+            }
+        }
+        //impresion del tablero
+        System.out.println(" 1 2 3 4 5 6 7 8");
+        char fila = 'A';
+        for (int i = 0; i < 8; i++) {
+            System.out.print(fila + " ");
+            for (int j = 0; j < 8; j++) {
+                System.out.print(tablero[i][j] + " ");
+            }
+            System.out.println();
+            fila++;
+        }
+    }
 }
