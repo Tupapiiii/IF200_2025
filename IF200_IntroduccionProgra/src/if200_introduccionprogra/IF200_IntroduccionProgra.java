@@ -74,8 +74,14 @@ public class IF200_IntroduccionProgra {
 //        lab.ejercicio3();
 //        lab.ejercicio4(24, 15, 50);
 //        lab.ejercicio5(4, 5);
-        int[] notas = {7, 8, 9, 10, 5, 1};
-        lab.ejercicio6(notas);
+//        int[] notas = {7, 8, 9, 10, 5, 1};
+//        lab.ejercicio6(notas);
+//        lab.ejercicio7("M", 24);
+//        lab.ejercicio8(500000, 3);
+//        lab.ejercicio9(5);
+//        lab.ejercicio10(5);
+//        lab.ejercicio11(200);
+//        lab.ejercicio12(10, 5);
     }
     
 }
