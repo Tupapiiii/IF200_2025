@@ -30,6 +30,43 @@ public class Ejercicios_Semana2_PracticaEnClase {
     }// end metodo
     
     public void ejercicioA(int n){
+//    int n = 5; 
+//
+//    if (n < 3) { 
+//        System.out.println("El tamaño del cuadrado debe ser al menos 3 para mostrar el centro y los bordes.");
+//        return;
+//    }
+//
+//    int centro = n / 2; 
+//
+//    // Primera fila
+//    for (int j = 0; j < n; j++) {
+//        System.out.print("* ");
+//    }
+//    System.out.println();
+//
+//    // Filas intermedias
+//    for (int i = 1; i < n - 1; i++) { 
+//        System.out.print("* "); 
+//
+//        for (int j = 1; j < n - 1; j++) { 
+//            if (i == centro && j == centro) {
+//                System.out.print("* ");
+//            } else {
+//                System.out.print("  "); 
+//            }
+//        }
+//        System.out.print("* "); 
+//        System.out.println();
+//    }
+
+//    // Última fila
+//    for (int j = 0; j < n; j++) {
+//        System.out.print("* ");
+//    }
+//    System.out.println();
+//}
+    
          // Primera fila
     for (int j = 0; j < n; j++) {
         System.out.print("* ");

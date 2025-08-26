@@ -47,8 +47,8 @@ public class IF200_IntroduccionProgra {
          * 
          */
         
-//        Ejercicios_Semana2_PracticaEnClase ej;
-//        ej = new Ejercicios_Semana2_PracticaEnClase();
+        Ejercicios_Semana2_PracticaEnClase ej;
+        ej = new Ejercicios_Semana2_PracticaEnClase();
 //        ej.quiz_B_piramide(5);
 //        System.out.println("EjercicioA: ");
 //        ej.ejercicioA(5);
