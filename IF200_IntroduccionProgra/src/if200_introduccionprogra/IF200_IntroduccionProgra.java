@@ -82,6 +82,25 @@ public class IF200_IntroduccionProgra {
 //        lab.ejercicio10(5);
 //        lab.ejercicio11(200);
 //        lab.ejercicio12(10, 5);
-    }
     
+     Lab2_Ejercicios lab2;
+    lab2 = new Lab2_Ejercicios();
+    
+//    lab2.ejercicio1();
+//    lab2.ejercicio2(30);
+//    lab2.ejercicio3(3, 5);
+//    lab2.ejercicio4(12);
+//    lab2.ejercicio5(5);
+//    lab2.ejercicio6(5, 7, 8);
+//    lab2.ejercicio7(3, 5);
+//    lab2.ejercicio8(1, 2, 3, 4);
+//    lab2.ejercicio9(10);
+//    lab2.ejercicio10(new int[]{5, 10, 15, 20});
+//    lab2.ejercicio11(new int[]{2,3,6,8,9,14,17,23,26,30});
+//    lab2.ejercicio12();
+//    lab2.ejercicio13();
+//    lab2.ejercicio14(4);
+    lab2.ejercicio15(new int[]{4, 9, 12, 17, 24, 90, 66, 34, 100, 77});
+    
+    }
 }
