@@ -18,6 +18,7 @@ public class Lab1_Ejercicios {
             System.out.println(n + " es par.");
         }else{
             System.out.println(n + " es impar");
+            System.out.println("Hola");
         }
     }
     
