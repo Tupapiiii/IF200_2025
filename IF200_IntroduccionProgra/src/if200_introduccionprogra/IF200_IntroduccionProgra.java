@@ -4,6 +4,7 @@
  */
 package if200_introduccionprogra;
 import domain.Person;
+import domain.SavingAccount;
 import logic.*;
 /**
  *
@@ -16,6 +17,19 @@ public class IF200_IntroduccionProgra {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Person client1 = new Person("Alvin", "Gomez", "1-234-567", "33445566", 19);
+        SavingAccount account1 = new SavingAccount("2025-09-04", 12, 5, "1000567801",25000, client1);
+        
+        //Simulation of deposit in the account
+        account1.deposit(3000);
+        System.out.println(account1.toString());
+        
+        // Simulation of withdraw in the account
+        System.out.println("\n----------------------");
+        System.out.println("Withdraw of money");
+        System.out.println("-----------------------\n");
+        account1.withdraw(15000);
+        System.out.println(account1.toString());
         
         // Dta types
         
@@ -47,8 +61,8 @@ public class IF200_IntroduccionProgra {
          * 
          */
         
-        Ejercicios_Semana2_PracticaEnClase ej;
-        ej = new Ejercicios_Semana2_PracticaEnClase();
+//        Ejercicios_Semana2_PracticaEnClase ej;
+//        ej = new Ejercicios_Semana2_PracticaEnClase();
 //        ej.quiz_B_piramide(5);
 //        System.out.println("EjercicioA: ");
 //        ej.ejercicioA(5);
@@ -67,8 +81,8 @@ public class IF200_IntroduccionProgra {
 /**
  * Instancia para la prueba de los métodos realizados para el laboratorio 1
  */
-        Lab1_Ejercicios lab;
-        lab = new Lab1_Ejercicios();
+//        Lab1_Ejercicios lab;
+//        lab = new Lab1_Ejercicios();
 //        lab.ejercicio1(2);
 //        lab.ejercicio2(-5);
 //        lab.ejercicio3();
@@ -83,8 +97,8 @@ public class IF200_IntroduccionProgra {
 //        lab.ejercicio11(200);
 //        lab.ejercicio12(10, 5);
     
-     Lab2_Ejercicios lab2;
-    lab2 = new Lab2_Ejercicios();
+//     Lab2_Ejercicios lab2;
+//    lab2 = new Lab2_Ejercicios();
     
 //    lab2.ejercicio1();
 //    lab2.ejercicio2(30);
@@ -100,7 +114,7 @@ public class IF200_IntroduccionProgra {
 //    lab2.ejercicio12();
 //    lab2.ejercicio13();
 //    lab2.ejercicio14(4);
-    lab2.ejercicio15(new int[]{4, 9, 12, 17, 24, 90, 66, 34, 100, 77});
+//    lab2.ejercicio15(new int[]{4, 9, 12, 17, 24, 90, 66, 34, 100, 77});
     
     }
 }
