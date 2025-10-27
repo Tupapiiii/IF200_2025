@@ -23,22 +23,22 @@ public class Juego {
         return turnoActual;
     }
     
-    public String intentarMover(int fromRow, int fromCol, int toRow, int toCol){
+    public String intentarMover(int filaOrigen, int colOrigen, int filaDestino, int colDestino){
         
         // 1. verificacion de posiciones dentro del tablero
-        if(!tablero.estaDentro(fromRow, fromCol) || !tablero.estaDentro(toRow, toCol)){
+        if(!tablero.estaDentro(filaOrigen, colOrigen) || !tablero.estaDentro(filaDestino, colDestino)){
             return "Las coordenadas están fuera del tablero";
         }
         
         // 2. revision de fichas en la posicion de origen
-        Ficha fichaOrigen = tablero.getFicha(fromRow, fromCol);
+        Ficha fichaOrigen = tablero.getFicha(filaOrigen, colOrigen);
         if(fichaOrigen == null){
             return "No hay ficha dentro de la posicion de origen o inicio";
         }
         
         // 3. revision de posicion de destino de la ficha
         
-        if(tablero.getFicha(toRow, toCol) != null){
+        if(tablero.getFicha(filaDestino, colDestino) != null){
             return "Ya exiiste una ficha en la casilla seleccionada";
         }
         
@@ -48,12 +48,12 @@ public class Juego {
          * dc delta columnas = diferencia en columnas(toCol - fromCol)
          */
         
-        int dr = toRow - fromRow;
-        int dc = toCol - fromCol;
+        int deltaFila = filaDestino - filaOrigen;
+        int deltaCol = colDestino - colOrigen;
         
         // 5. validacion de movimiento de casilla en diagonal
         
-        if(Math.abs(dr) != 1 || Math.abs(dc) != 1){
+        if(Math.abs(deltaFila) != 1 || Math.abs(deltaCol) != 1){
             return "Solo se puede mover una casilla en diagonal";
         }
         
@@ -70,12 +70,12 @@ public class Juego {
         
         switch(colorFicha){
             case 'R':
-                if(dr != 1){
+                if(deltaFila != 1){
                     return "Fichas rojas con movimiento unicamente hacia abajo";
                 }
                 break;
             case 'B':
-                if(dr != -1){
+                if(deltaFila != -1){
                     return "Fichas negras con movimiento unicamente hacia arriba";
                 }
                 break;
@@ -86,7 +86,7 @@ public class Juego {
         
         // 8. movimiento de la ficha luego de las validaciones
        
-        tablero.mover(fromRow, fromCol, toRow, toCol);
+        tablero.mover(filaOrigen, colOrigen, filaDestino, colDestino);
         
         // 9. cambiar turno de jugador
         

@@ -66,10 +66,10 @@ public class Tablero {
                 col >= 0 && col < SIZE;
     }
     
-    public void mover(int fromRow, int fromCol, int toRow, int toCol){
-        Ficha f = getFicha(fromRow, fromCol);
-        setFicha(toRow, toCol, f);
-        setFicha(fromRow, fromCol, null);
+    public void mover(int filaOrigen, int colOrigen, int filaDestino, int colDestino){
+        Ficha f = getFicha(filaOrigen, colOrigen);
+        setFicha(filaDestino, colDestino, f);
+        setFicha(filaOrigen, colOrigen, null);
     }
     
     @Override
