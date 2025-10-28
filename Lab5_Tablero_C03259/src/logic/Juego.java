@@ -2,19 +2,31 @@
 package logic;
 
 /**
- *
+ * Implementacion de las validaciones del juego de damas 
+ * verificando distintas validaciones para hacer movimientos dentro del mismo
  * @author alvin
  */
 public class Juego {
     
+    /**
+     * Atributos de la clase
+     */
     private final Tablero tablero;
     private char turnoActual;
     
+    /**
+     * Constructor que inicializa el juego dandole el turno a las fichas rojas
+     * puede variar segun se desee
+     */
     public Juego(){
         tablero = new Tablero();
         turnoActual = 'R';
     }
     
+    /**
+     * Gets de la clase
+     * @return 
+     */
     public Tablero getTablero(){
         return tablero;
     }
@@ -23,6 +35,17 @@ public class Juego {
         return turnoActual;
     }
     
+    /**
+     * Método encargado de la validacion de movimientos de las fichas
+     * tomando estrictamente cada paso para que el ambiente de juego sea similar 
+     * al del tablero, permitiendo movimientos segun la ficha y en diagonales
+     * etc.
+     * @param filaOrigen
+     * @param colOrigen
+     * @param filaDestino
+     * @param colDestino
+     * @return 
+     */
     public String intentarMover(int filaOrigen, int colOrigen, int filaDestino, int colDestino){
         
         // 1. verificacion de posiciones dentro del tablero

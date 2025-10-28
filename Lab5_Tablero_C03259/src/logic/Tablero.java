@@ -10,9 +10,18 @@ package logic;
  */
 public class Tablero {
     
+    /**
+     * Atributos de la clase
+     * con matriz de objeto y un tamaño especificado
+     * el cual puede ser cambiado
+     */
     private final Ficha[][] celdas;
     private static final int SIZE = 8; //VALOR ESTATICO DEFINIDO SIN CAMBIOS
     
+    /**
+     * Constructor que incializa las fichas en el tablero, posicionando por el 
+     * tamaño del tablero
+     */
     public Tablero(){
         celdas = new Ficha[SIZE][SIZE];
         inicializar();
@@ -48,6 +57,13 @@ public class Tablero {
         }
     }
     
+    /**
+     * Obtencion de la ficha en una posicion especifica
+     * null si no se encuentra en dicha posicion
+     * @param fila
+     * @param col
+     * @return 
+     */
     public Ficha getFicha(int fila, int col){
         if(!estaDentro(fila, col)){
             return null;
@@ -56,22 +72,47 @@ public class Tablero {
         }
     }
     
+    /**
+     * Colocacion de una ficha en una posicion especifica
+     * @param fila
+     * @param col
+     * @param ficha 
+     */
     public void setFicha(int fila, int col, Ficha ficha){
         if(!estaDentro(fila, col)) throw new IndexOutOfBoundsException("Fuera del tablero");
         celdas[fila][col] = ficha;
     }
     
+    /**
+     * Verificacion de las coordenadas dento de los limites del tablero
+     * @param fila
+     * @param col
+     * @return 
+     */
     public boolean estaDentro(int fila, int col){
         return fila >= 0 && fila < SIZE &&
                 col >= 0 && col < SIZE;
     }
     
+    /**
+     * Movimiento de la ficha de origen al punto de destino 
+     * asumiendo que las validaciones ya fueron correctas para su movimiento
+     * @param filaOrigen
+     * @param colOrigen
+     * @param filaDestino
+     * @param colDestino 
+     */
     public void mover(int filaOrigen, int colOrigen, int filaDestino, int colDestino){
         Ficha f = getFicha(filaOrigen, colOrigen);
         setFicha(filaDestino, colDestino, f);
         setFicha(filaOrigen, colOrigen, null);
     }
     
+    /**
+     * Muestra el tablero en su represntacion de texto con filas y columnas 
+     * en su formato de muestras al usuario
+     * @return 
+     */
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
