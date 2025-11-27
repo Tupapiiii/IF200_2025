@@ -2,7 +2,7 @@
 package logic;
 
 /**
- *
+ * prueba para revisar push
  * @author alvin
  */
 public class Ejercicios_Arreglos {
